@@ -9,11 +9,12 @@ import userRouter from "./routes/users.js";
 const app = express();
 dotenv.config();
 
-if (process.env.NODE_ENV=== 'production') { 
-  app.use(express.static('client/build')); 
-  app.get('*',(req,res) => { 
-      res.sendFile(path.join(__dirname , 'client' , 'build' , 'index.html')) 
-  })
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+}
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
