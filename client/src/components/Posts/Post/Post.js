@@ -87,11 +87,11 @@ const Post = ({ post, setCurrentId }) => {
         <Typography className={classes.title} variant="h5" gutterBottom>
           {post.title}
         </Typography>
-        <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {post.message}
-          </Typography>
-        </CardContent>
+        // <CardContent>
+        //   <Typography variant="body2" color="textSecondary" component="p">
+        //     {post.message}
+        //   </Typography>
+        // </CardContent>
       </ButtonBase>
       <CardActions className={classes.cardActions}>
         {((user && user.result.sub === post.creator) ||
