@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "https://cherish-snap.onrender.com/" });
+const API = axios.create({ baseURL: "https://cherishsnap.onrender.com/" });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
