@@ -21,7 +21,7 @@ export const getPost = (id) => async (dispatch) => {
 
     dispatch({ type: END_LOADING });
   } catch (error) {
-    console.log(error);
+    console.log(error.response.data);
   }
 };
 
@@ -39,7 +39,7 @@ export const getPosts = (page) => async (dispatch) => {
 
     dispatch({ type: END_LOADING });
   } catch (error) {
-    console.log(error);
+    console.log(error.response.data);
   }
 };
 
@@ -53,7 +53,7 @@ export const getPostsBySearch = (searchQuery) => async (dispatch) => {
     dispatch({ type: FETCH_BY_SEARCH, payload: { data } });
     dispatch({ type: END_LOADING });
   } catch (error) {
-    console.log(error);
+    console.log(error.response.data);
   }
 };
 
@@ -65,7 +65,7 @@ export const createPost = (post, navigate) => async (dispatch) => {
 
     dispatch({ type: CREATE, payload: data });
   } catch (error) {
-    console.log(error);
+    console.log(error.response.data);
   }
 };
 
@@ -75,7 +75,7 @@ export const updatePost = (id, post) => async (dispatch) => {
 
     dispatch({ type: UPDATE, payload: data });
   } catch (error) {
-    console.log(error);
+    console.log(error.response.data);
   }
 };
 
@@ -85,7 +85,7 @@ export const deletePost = (id) => async (dispatch) => {
 
     dispatch({ type: DELETE, payload: id });
   } catch (error) {
-    console.log(error);
+    console.log(error.response.data);
   }
 };
 
@@ -95,6 +95,6 @@ export const likePost = (id) => async (dispatch) => {
 
     dispatch({ type: UPDATE, payload: data });
   } catch (error) {
-    console.log(error);
+    console.log(error.response.data);
   }
 };
